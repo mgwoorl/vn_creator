@@ -1,0 +1,329 @@
+/* Исправленный responsive.css */
+
+@media (max-width: 1024px) {
+  .app-main {
+    padding: 0 24px;
+  }
+  
+  .projects-container {
+    padding: 24px 28px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  
+  .editor-content {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    padding: 0 16px;
+    margin: 16px auto;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 12px 16px;
+  }
+  
+  .user-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .projects-container {
+    padding: 20px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .editor-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 16px;
+  }
+  
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .header-right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .project-editor .editor-content {
+    padding: 0 16px;
+  }
+  
+  .resource-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .builder-header {
+    flex-direction: column;
+  }
+  
+  .scenes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .resources-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+  }
+  
+  .preview-dialog {
+    padding: 16px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+  
+  .preview-text {
+    font-size: 14px;
+  }
+  
+  .preview-character-name {
+    font-size: 16px;
+  }
+  
+  .preview-sprite-container {
+    max-width: 60%;
+    max-height: 45%;
+  }
+  
+  .preview-option {
+    padding: 10px 14px;
+  }
+  
+  .preview-option .option-number {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+  
+  .preview-option .option-text {
+    font-size: 13px;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 24px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 0;
+  }
+  
+  .info-label {
+    width: auto;
+    font-size: 12px;
+    color: #9ca3af;
+  }
+  
+  .info-value {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .history-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .history-details {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+  
+  .statuses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .status-card {
+    padding: 16px;
+  }
+  
+  .status-name {
+    font-size: 15px;
+  }
+  
+  .required-statuses-container {
+    padding: 14px;
+  }
+  
+  .status-options {
+    gap: 8px;
+  }
+  
+  .status-option {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+  
+  .modal-buttons {
+    flex-direction: column;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .details-hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+  }
+  
+  .details-cover {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .details-project-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .details-author {
+    justify-content: center;
+  }
+  
+  .details-stats-grid {
+    justify-content: center;
+  }
+  
+  .stat-item {
+    min-width: 140px;
+  }
+  
+  .details-required-statuses {
+    justify-content: center;
+  }
+  
+  .details-section {
+    padding: 20px;
+  }
+  
+  .reward-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .edit-btn-large, .play-btn-large {
+    width: 100%;
+  }
+  
+  .project-details-page {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .preview-dialog {
+    max-width: 900px;
+  }
+  
+  .preview-text {
+    font-size: 16px;
+  }
+  
+  .preview-character-name {
+    font-size: 18px;
+  }
+  
+  .preview-sprite-container {
+    max-width: 40%;
+    max-height: 60%;
+  }
+  
+  .preview-option .option-text {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .app-main {
+    max-width: 1600px;
+    padding: 0 40px;
+  }
+  
+  .projects-container {
+    padding: 32px 40px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+  }
+}
+
+/* Добавьте в responsive.css */
+
+@media (min-width: 1400px) {
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .projects-container {
+    padding: 16px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-actions .submit-btn,
+  .form-actions .cancel-form-btn {
+    width: 100%;
+  }
+}

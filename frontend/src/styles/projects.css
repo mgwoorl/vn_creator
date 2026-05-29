@@ -1,0 +1,1449 @@
+.projects-container {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid #eaeef2;
+  margin: 0;
+  width: 100%;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.projects-header h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.create-btn {
+  padding: 8px 18px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+}
+
+.create-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.create-form {
+  background: #fafbfc;
+  padding: 20px 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.create-form h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.submit-btn {
+  flex: 1;
+  padding: 10px 16px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 42px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
+.cancel-form-btn {
+  flex: 1;
+  padding: 10px 16px;
+  background: #9ca3af;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 42px;
+}
+
+.cancel-form-btn:hover {
+  background: #6b7280;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-color: #d1d5db;
+}
+
+.project-cover {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  background: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.default-cover {
+  width: 100%;
+  height: 100%;
+  background: #667eea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 6px;
+}
+
+.default-cover-icon {
+  font-size: 32px;
+  opacity: 0.9;
+}
+
+.default-cover span {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.cover-badge-container {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.cover-badge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.published-badge {
+  background: #10b981;
+  color: white;
+}
+
+.draft-badge {
+  background: #fbbf24;
+  color: white;
+}
+
+.completed-badge {
+  background: #10b981;
+  color: white;
+}
+
+.status-earned-badge {
+  background: #fbbf24;
+  color: white;
+}
+
+.project-content {
+  padding: 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+  min-height: 40px;
+}
+
+.project-description {
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  min-height: 36px;
+}
+
+.read-more-link {
+  color: #667eea;
+  cursor: pointer;
+  font-size: 11px;
+  display: inline;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.read-more-link:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
+
+.project-required-statuses {
+  margin: 6px 0 10px;
+  padding: 6px 8px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+  flex-shrink: 0;
+}
+
+.project-required-statuses small {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.status-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.status-tag {
+  background: #e5e7eb;
+  color: #374151;
+  padding: 2px 7px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.project-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 10px;
+  margin-top: 6px;
+}
+
+.edit-btn, .play-btn {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.edit-btn {
+  background: #4b5563;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #374151;
+  transform: translateY(-1px);
+}
+
+.play-btn {
+  background: #667eea;
+  color: white;
+}
+
+.play-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+.play-btn.replay-btn {
+  background: #fbbf24;
+  color: white;
+}
+
+.play-btn.replay-btn:hover {
+  background: #f59e0b;
+}
+
+/* Табы для студента */
+.student-view .projects-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 20px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0;
+}
+
+.student-view .tab {
+  padding: 6px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  border-radius: 0;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+}
+
+.student-view .tab:hover {
+  color: #374151;
+}
+
+.student-view .tab.active {
+  color: #667eea;
+}
+
+.student-view .tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #667eea;
+}
+
+/* Добавить в конец файла */
+
+.project-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 10px;
+}
+
+.edit-btn, .play-btn, .delete-btn {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.edit-btn {
+  background: #4b5563;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #374151;
+  transform: translateY(-1px);
+}
+
+.play-btn {
+  background: #667eea;
+  color: white;
+}
+
+.play-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 5px 10px;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+  transform: translateY(-1px);
+}
+
+/* Оверлей подтверждения удаления на карточке */
+.delete-confirm-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: 14px;
+  backdrop-filter: blur(2px);
+}
+
+.delete-confirm-dialog {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  max-width: 220px;
+  width: 90%;
+}
+
+.delete-confirm-dialog p {
+  font-size: 14px;
+  color: #1f2937;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.delete-confirm-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.confirm-yes-btn {
+  padding: 6px 16px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.confirm-yes-btn:hover {
+  background: #dc2626;
+}
+
+.confirm-no-btn {
+  padding: 6px 16px;
+  background: #e5e7eb;
+  color: #374151;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.confirm-no-btn:hover {
+  background: #d1d5db;
+}
+
+/* Кнопка возврата */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+/* Панель фильтров */
+.projects-filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Поле поиска */
+.projects-search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 2;
+  min-width: 220px;
+}
+
+.projects-search-icon {
+  position: absolute;
+  left: 12px;
+  color: #9ca3af;
+  font-size: 15px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.projects-search-input {
+  width: 100%;
+  padding: 10px 36px 10px 38px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  color: #1f2937;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.projects-search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.projects-search-clear {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.projects-search-clear:hover {
+  background: #e5e7eb;
+  color: #6b7280;
+}
+
+/* Селекты фильтров */
+.projects-filter-select {
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 13px;
+  background: white;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 180px;
+  flex: 1;
+}
+
+.projects-filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Кнопка создания */
+.projects-create-btn {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.projects-create-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Форма создания */
+.projects-create-form {
+  background: #fafbfc;
+  padding: 20px 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #e5e7eb;
+}
+
+.projects-create-form h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.form-error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  border-left: 3px solid #dc2626;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .projects-filter-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .projects-search-wrapper {
+    min-width: 100%;
+  }
+
+  .projects-filter-select {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+/* Страница проектов */
+.projects-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 32px;
+}
+
+.projects-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.projects-page-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.projects-page-title h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.projects-count {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Табы */
+.projects-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.projects-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.projects-tab:hover {
+  color: #374151;
+}
+
+.projects-tab.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tab-badge {
+  background: #e5e7eb;
+  color: #6b7280;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.projects-tab.active .tab-badge {
+  background: #667eea;
+  color: white;
+}
+
+/* Панель фильтров */
+.projects-filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projects-search-wrapper {
+  position: relative;
+  flex: 2;
+  min-width: 250px;
+}
+
+.projects-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+.projects-search-input {
+  width: 100%;
+  padding: 11px 40px 11px 42px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  background: white;
+  transition: all 0.2s;
+}
+
+.projects-search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.projects-search-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.projects-search-clear:hover {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.projects-filter-select {
+  padding: 11px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 13px;
+  background: white;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 180px;
+}
+
+.projects-filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+/* Пустое состояние */
+.projects-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 16px;
+  border: 2px dashed #e5e7eb;
+  color: #9ca3af;
+}
+
+.projects-empty p {
+  font-size: 16px;
+  color: #6b7280;
+  margin-top: 16px;
+}
+
+.projects-empty span {
+  font-size: 13px;
+}
+
+/* Кнопка создания */
+.projects-create-btn {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.projects-create-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Сетка */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .projects-page {
+    padding: 16px;
+  }
+  .projects-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Табы для преподавателя на странице проектов */
+.teacher-container .projects-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.teacher-container .tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.teacher-container .tab:hover {
+  color: #374151;
+}
+
+.teacher-container .tab.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-container .tab-badge {
+  background: #e5e7eb;
+  color: #6b7280;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.teacher-container .tab.active .tab-badge {
+  background: #667eea;
+  color: white;
+}
+
+/* Табы для студента на странице проектов */
+.student-view .projects-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 16px 0 20px;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.student-view .tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.student-view .tab:hover {
+  color: #374151;
+}
+
+.student-view .tab.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.student-view .tab-badge {
+  background: #e5e7eb;
+  color: #6b7280;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.student-view .tab.active .tab-badge {
+  background: #667eea;
+  color: white;
+}
+
+/* Табы для преподавателя */
+.teacher-container .projects-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.teacher-container .tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.teacher-container .tab:hover {
+  color: #374151;
+}
+
+.teacher-container .tab.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-container .tab-badge {
+  background: #e5e7eb;
+  color: #6b7280;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.teacher-container .tab.active .tab-badge {
+  background: #667eea;
+  color: white;
+}
+
+/* Табы для студента */
+.student-view .projects-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 16px 0 20px;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.student-view .tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.student-view .tab:hover {
+  color: #374151;
+}
+
+.student-view .tab.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.student-view .tab-badge {
+  background: #e5e7eb;
+  color: #6b7280;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.student-view .tab.active .tab-badge {
+  background: #667eea;
+  color: white;
+}
+
+/* Убираем старые стили с подчёркиванием */
+.student-view .projects-tabs {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.student-view .tab.active::after {
+  display: none;
+}
+
+/* Награда на карточке студента */
+.project-reward {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-radius: 10px;
+  border: 1px solid #fcd34d;
+}
+
+.reward-icon {
+  color: #f59e0b;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.reward-text {
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.4;
+}
+
+.reward-text strong {
+  color: #78350f;
+  font-weight: 600;
+}
+
+/* Кнопка "Играть снова" жёлтая */
+.play-btn.replay-btn {
+  background: #fbbf24;
+  color: #78350f;
+}
+
+.play-btn.replay-btn:hover {
+  background: #f59e0b;
+}
+
+/* Награда на карточке */
+.project-reward {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-radius: 10px;
+  border: 1px solid #fcd34d;
+}
+
+.reward-icon {
+  color: #f59e0b;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.reward-text {
+  font-size: 13px;
+  color: #92400e;
+  line-height: 1.4;
+}
+
+.reward-text strong {
+  color: #78350f;
+  font-weight: 600;
+}
+
+/* Табы для преподавателя */
+.teacher-container .projects-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+.teacher-container .tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.teacher-container .tab:hover {
+  color: #374151;
+}
+
+.teacher-container .tab.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-container .tab-badge {
+  background: #e5e7eb;
+  color: #6b7280;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.teacher-container .tab.active .tab-badge {
+  background: #667eea;
+  color: white;
+}
+
+/* Табы для студента */
+.student-view .projects-tabs {
+  display: flex;
+  gap: 4px;
+  margin: 16px 0 20px;
+  background: #f3f4f6;
+  padding: 4px;
+  border-radius: 12px;
+  width: fit-content;
+  border-bottom: none;
+}
+
+.student-view .tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.student-view .tab:hover {
+  color: #374151;
+}
+
+.student-view .tab.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.student-view .tab.active::after {
+  display: none;
+}
+
+.student-view .tab-badge {
+  background: #e5e7eb;
+  color: #6b7280;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.student-view .tab.active .tab-badge {
+  background: #667eea;
+  color: white;
+}
+
+/* Прокрутка для таблиц в аналитике */
+.leaderboard-table-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.leaderboard-table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table-scroll th,
+.leaderboard-table-scroll td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+}
+
+.leaderboard-table-scroll th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.answers-detail-list-scroll {
+  max-height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Убираем подчёркивание у старых табов */
+.student-view .projects-tabs {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Контейнер таблицы */
+.leaderboard-table-container {
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.leaderboard-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.leaderboard-table-container th,
+.leaderboard-table-container td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+}
+
+.leaderboard-table-container th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.answers-detail-list-scroll {
+  max-height: 350px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Пагинация */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 16px 0;
+}
+
+.pagination:first-child {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.pagination:last-child {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.pagination-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  color: #374151;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  border-color: #667eea;
+  color: #667eea;
+  background: #f0f4ff;
+}
+
+.pagination-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pagination-dots {
+  width: 32px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+}

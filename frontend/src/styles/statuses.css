@@ -1,0 +1,154 @@
+/* Стили для статусов при создании проекта */
+.reward-status-select-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.reward-status-select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+.add-status-inline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background: #f0f4ff;
+  border: none;
+  border-radius: 8px;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.add-status-inline-btn:hover {
+  background: #e8edff;
+}
+
+.new-status-inline {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.new-status-inline input {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  width: 120px;
+}
+
+.new-status-inline .confirm-btn {
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.new-status-inline .cancel-btn {
+  padding: 8px 12px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Контейнер для требуемых статусов */
+.required-statuses-container {
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 14px;
+  background: #fafafa;
+}
+
+.selected-statuses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eaeaea;
+  min-height: 44px;
+}
+
+.status-tag.selected {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-tag.selected .remove-status {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #2e7d32;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.status-tag.selected .remove-status:hover {
+  background: rgba(46, 125, 50, 0.2);
+  transform: scale(1.1);
+}
+
+.statuses-list {
+  margin-bottom: 16px;
+}
+
+.statuses-list label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.status-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.status-option {
+  padding: 5px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.status-option:hover {
+  border-color: #667eea;
+  background: #f0f4ff;
+}
+
+.status-option.selected {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}

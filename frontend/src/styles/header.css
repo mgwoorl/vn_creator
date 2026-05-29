@@ -1,0 +1,97 @@
+.app-header {
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+  padding: 8px 0;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.logo-section:hover {
+  opacity: 0.8;
+}
+
+.logo-icon {
+  font-size: 24px;
+  color: #667eea;
+}
+
+.header-content h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-name-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.user-name-link:hover {
+  color: #667eea;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.user-icon {
+  font-size: 14px;
+}
+
+.user-role-badge {
+  padding: 2px 8px;
+  background: #e9ecef;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #495057;
+  white-space: nowrap;
+}
+
+.logout-btn {
+  padding: 4px 10px;
+  background: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.logout-btn:hover {
+  background: #e5e5e5;
+  border-color: #ccc;
+}
